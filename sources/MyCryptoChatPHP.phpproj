@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>MyCryptoChatPHP</Name>
+    <ProjectGuid>7e7a2f04-27fe-4c08-ba65-cb80fc649a5c</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MyCryptoChatPHP</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>MyCryptoChatPHP</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <IISProjectUrl>http://localhost:39751/</IISProjectUrl>
+    <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+    <Server>IISExpress</Server>
+    <PublishEvent>None</PublishEvent>
+    <PHPDevAutoPort>True</PHPDevAutoPort>
+    <PHPDevPort>40753</PHPDevPort>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="about.php" />
+    <Compile Include="chatroom.php" />
+    <Compile Include="getMessages.php" />
+    <Compile Include="inc\classes.php" />
+    <Compile Include="inc\constants.php" />
+    <Compile Include="inc\dbmanager.php" />
+    <Compile Include="inc\functions.php" />
+    <Compile Include="inc\init.php" />
+    <Compile Include="index.php" />
+    <Compile Include="newroom.php" />
+    <Compile Include="sendMessage.php" />
+    <Compile Include="stats.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db\chatrooms.sqlite" />
+    <Content Include="db\logs.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\accent.png" />
+    <Content Include="scripts\jquery.js" />
+    <Content Include="scripts\jquery\jquery-1.8.2.js" />
+    <Content Include="scripts\modernizr.js" />
+    <Content Include="scripts\modernizr\modernizr-2.6.2.js" />
+    <Content Include="scripts\myCryptoChat.js" />
+    <Content Include="scripts\myCryptoChat\myCryptoChat.js" />
+    <Content Include="scripts\zerobin.js" />
+    <Content Include="scripts\zerobin\base64.js" />
+    <Content Include="scripts\zerobin\rawdeflate.js" />
+    <Content Include="scripts\zerobin\rawinflate.js" />
+    <Content Include="scripts\zerobin\sjcl.js" />
+    <Content Include="scripts\zerobin\vizhash.js" />
+    <Content Include="scripts\zerobin\zerobin.js" />
+    <Content Include="styles\myCryptoChat.css" />
+    <Content Include="styles\myCryptoChat\myCryptoChat.css" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="db\" />
+    <Folder Include="images\" />
+    <Folder Include="inc\" />
+    <Folder Include="scripts\" />
+    <Folder Include="scripts\jquery\" />
+    <Folder Include="scripts\modernizr\" />
+    <Folder Include="scripts\myCryptoChat\" />
+    <Folder Include="scripts\zerobin\" />
+    <Folder Include="styles\" />
+    <Folder Include="styles\myCryptoChat\" />
+  </ItemGroup>
+</Project>
