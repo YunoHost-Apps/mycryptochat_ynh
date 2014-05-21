@@ -28,9 +28,6 @@ final_path=/var/www/mycryptochat
 sudo mkdir -p $final_path
 sudo cp -r ../sources/* $final_path
 
-# Update DB
-sudo php5 $final_path/maintenance/update.php
-
 # Set permissions to mycryptochat directory
 sudo chown -R www-data: $final_path
 
