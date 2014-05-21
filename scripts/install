@@ -29,11 +29,12 @@ sudo mkdir -p $final_path
 sudo cp -r ../sources/mycryptochat/* $final_path
 sudo cp ../conf/LocalSettings.php $final_path/
 
-# Change variables in Roundcube configuration
-sudo sed -i "s/mycryptochat-ynhDESkeyTOchange/$deskey/g" $final_path/config/main.inc.php
-sudo sed -i "s/yunouser/$db_user/g" $final_path/config/db.inc.php
-sudo sed -i "s/yunopass/$db_pwd/g" $final_path/config/db.inc.php
-sudo sed -i "s/yunobase/$db_user/g" $final_path/config/db.inc.php
+# Change variables in Mediawiki configuration
+sudo sed -i "s@ynh_mycryptochat_path@$path@g" $final_path/LocalSettings.php
+sudo sed -i "s@ynh_mycryptochat_domain@$domain@g" $final_path/LocalSettings.php
+sudo sed -i "s/ynh_wiki_db_name/$db_user/g" $final_path/LocalSettings.php
+sudo sed -i "s/ynh_wiki_db_user/$db_user/g" $final_path/LocalSettings.php
+sudo sed -i "s/ynh_wiki_db_password/$db_pwd/g" $final_path/LocalSettings.php
 
 # Update DB
 sudo php5 $final_path/maintenance/update.php
