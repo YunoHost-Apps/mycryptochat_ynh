@@ -24,7 +24,6 @@
                 "name": "path",
                 "ask": {
                     "en": "Choose a path for MyCryptoChat"
-                    "fr": "Choissisez un emplacement pour MyCryptoChat"
                 },
                 "example": "/cryptochat",
                 "default": "/cryptochat"
