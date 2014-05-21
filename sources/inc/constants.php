@@ -1,6 +1,6 @@
 <?php
 // modify it: replace 'f-rjng24!1r5TRHHgnjrt' by some random characters
-define('SEED', 'f-rjng24!1r5TRHHgnjrt');
+define('SEED', 'qghfoczkf-221ngrTRHHgnjrt');
 
 define('NB_MINUTES_TO_LIVE_MIN', 3);
 define('NB_MINUTES_TO_LIVE_MAX', 4320);
