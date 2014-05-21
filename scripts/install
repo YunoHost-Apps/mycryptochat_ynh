@@ -17,7 +17,7 @@ db_user=mycryptochat
 
 # Install php
 sudo apt-get update
-sudo apt-get install php5-cli -y
+sudo apt-get install php5-cli sqlite php5-sqlite -y
 
 # Initialize database and store mysql password for upgrade
 sudo yunohost app initdb $db_user -p $db_pwd -s $(readlink -e ../sources/SQL/mysql.initial.sql)
@@ -26,15 +26,7 @@ sudo yunohost app setting mycryptochat mysqlpwd -v $db_pwd
 # Copy files to the right place
 final_path=/var/www/mycryptochat
 sudo mkdir -p $final_path
-sudo cp -r ../sources/mycryptochat/* $final_path
-sudo cp ../conf/LocalSettings.php $final_path/
-
-# Change variables in Mediawiki configuration
-sudo sed -i "s@ynh_mycryptochat_path@$path@g" $final_path/LocalSettings.php
-sudo sed -i "s@ynh_mycryptochat_domain@$domain@g" $final_path/LocalSettings.php
-sudo sed -i "s/ynh_wiki_db_name/$db_user/g" $final_path/LocalSettings.php
-sudo sed -i "s/ynh_wiki_db_user/$db_user/g" $final_path/LocalSettings.php
-sudo sed -i "s/ynh_wiki_db_password/$db_pwd/g" $final_path/LocalSettings.php
+sudo cp -r ../sources/* $final_path
 
 # Update DB
 sudo php5 $final_path/maintenance/update.php
