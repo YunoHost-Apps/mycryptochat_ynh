@@ -1,4 +1,4 @@
 mycryptochat_ynh
 ================
 
-MyCryptoChat for Yunohost
+[MyCryptoChat](https://mycryptochatphp.codeplex.com/) for Yunohost
