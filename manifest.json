@@ -17,7 +17,6 @@
                 "name": "domain",
                 "ask": {
                     "en": "Choose a domain for MyCryptoChat"
-                    "fr": "Choissisez un domaine pour MyCryptoChat"
                 },
                 "example": "domain.org"
             },
