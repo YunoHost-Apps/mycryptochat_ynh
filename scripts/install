@@ -20,7 +20,8 @@ sudo apt-get update
 sudo apt-get install php5-cli sqlite php5-sqlite -y
 
 # Initialize database and store mysql password for upgrade
-sudo yunohost app initdb $db_user -p $db_pwd -s $(readlink -e ../sources/SQL/mysql.initial.sql)
+sudo yunohost app initdb $db_user -p $(readlink -e ../sources/SQL/mysql.initial.sql)
+sudo yunohost app initdb $db_pwd -s $(readlink -e ../sources/SQL/mysql.initial.sql)
 sudo yunohost app setting mycryptochat mysqlpwd -v $db_pwd
 
 # Copy files to the right place
