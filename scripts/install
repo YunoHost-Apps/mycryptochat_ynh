@@ -27,7 +27,6 @@ sudo yunohost app setting mycryptochat mysqlpwd -v $db_pwd
 final_path=/var/www/mycryptochat
 sudo mkdir -p $final_path
 sudo cp -r ../sources/* $final_path
-sudo cp ../conf/LocalSettings.php $final_path/
 
 # Change variables in Mediawiki configuration
 sudo sed -i "s@ynh_mycryptochat_path@$path@g" $final_path/LocalSettings.php
