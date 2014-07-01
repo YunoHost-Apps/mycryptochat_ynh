@@ -3,7 +3,7 @@
     "id": "mycryptochat",
     "description": {
         "en": "Encrypted IM",
-        "fr": "Messagerie Instantanée cryptée"
+        "fr": "Messagerie Instantanée chiffrée"
     },
     "developer": {
         "name": "mrtino",
@@ -25,7 +25,7 @@
                 "ask": {
                     "en": "Choose a path for MyCryptoChat"
                 },
-                "example": "/cryptochat",
+                "example": "/privatechat",
                 "default": "/cryptochat"
             }
         ]
