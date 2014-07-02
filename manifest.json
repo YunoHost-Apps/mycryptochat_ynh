@@ -31,7 +31,7 @@
             {
                 "name": "is_public",
                 "ask": {
-                    "en": "Can anyone can use it ?"
+                    "en": "Can anyone can use it ?",
                     "fr": "Est-ce que tout le monde peut l'utiliser ?"
                 },
                 "choices": ["Yes", "No"],
