@@ -27,7 +27,7 @@
                 },
                 "example": "/chatwhithoutnsa",
                 "default": "/cryptochat"
-            }
+            },
             {
                 "name": "is_public",
                 "ask": {
