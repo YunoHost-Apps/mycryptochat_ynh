@@ -1,0 +1,33 @@
+#!/bin/bash
+
+
+domain=$(sudo yunohost app setting mycryptochat domain)
+path=$(sudo yunohost app setting mycryptochat path)
+is_public=$(sudo yunohost app setting mycryptochat is_public)
+
+
+# TODO : Maybe we need to do something with database, see install script.
+
+
+# Copy files to the right place
+final_path=/var/www/mycryptochat
+sudo mkdir -p $final_path
+sudo cp -r ../sources/* $final_path
+
+# Set permissions to mycryptochat directory
+sudo chown -R www-data: $final_path
+
+# Modify Nginx configuration file and copy it to Nginx conf directory
+sed -i "s@PATHTOCHANGE@$path@g" ../conf/nginx.conf
+sed -i "s@ALIASTOCHANGE@$final_path/@g" ../conf/nginx.conf
+sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/mycryptochat.conf
+
+# Set private or no
+if [ $is_public = "Yes" ];
+then
+  sudo yunohost app setting mycryptochat unprotected_uris -v "/"
+fi
+
+# Reload Nginx and regenerate SSOwat conf
+sudo service nginx reload
+sudo yunohost app ssowatconf
