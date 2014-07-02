@@ -8,3 +8,6 @@ domain=$(sudo yunohost app setting mycryptochat domain)
 mysql -u root -p$root_pwd -e "DROP DATABASE $db_name ; DROP USER $db_user@localhost ;"
 sudo rm -rf /var/www/mycryptochat
 sudo rm -f /etc/nginx/conf.d/$domain.d/mycryptochat.conf
+
+sudo service php5-fpm restart
+sudo service nginx reload
