@@ -34,7 +34,7 @@
                     "en": "Can anyone can use it ?"
                     "fr": "Est-ce que tout le monde peut l'utiliser ?"
                 },
-                "choices": ["Yes", "No"]
+                "choices": ["Yes", "No"],
                 "default": "Yes"
             }
         ]
