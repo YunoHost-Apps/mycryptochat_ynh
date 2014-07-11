@@ -31,8 +31,8 @@
             {
                 "name": "is_public",
                 "ask": {
-                    "en": "Can anyone can use it ?",
-                    "fr": "Est-ce que tout le monde peut l'utiliser ?"
+                    "en": "Is it a public site ?",
+                    "fr": "Est-ce un site public ?"
                 },
                 "choices": ["Yes", "No"],
                 "default": "Yes"
